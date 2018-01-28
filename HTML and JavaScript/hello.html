@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript - Add HTML Table Row </title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            
+            function addRow()
+            {
+                // get input values
+                var fn = document.getElementById('fname').value;
+                 var ln = document.getElementById('lname').value;
+                  var age = document.getElementById('age').value;
+                  
+           
+                  var table = document.getElementsByTagName('table')[0];
+                  
+            
+                  var newRow = table.insertRow(table.rows.length/2+1);
+                  
+                  // add cells to the row
+                  var cel1 = newRow.insertCell(0);
+                  var cel2 = newRow.insertCell(1);
+                  var cel3 = newRow.insertCell(2);
+                  
+                  // add values to the cells
+                  cel1.innerHTML = fn;
+                  cel2.innerHTML = ln;
+                  cel3.innerHTML = age;
+            }
+            
+        </script>
+        
+    </head>
+
+    <body>
+        
+        First Name: <input type="text" name="fname" id="fname" /><br/><br/>
+        Last Name: <input type="text" name="lname" id="lname" /><br/><br/>
+        Home: <input type="text" name="age" id="age" /><br/><br/>
+        <button onclick="addRow();">Add Row</button><br/><br/>
+
+        <table border="1">
+            
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Home</th>
+            </tr>
+            
+            <tr>
+                <td>Rose</td>
+                <td>Tyler</td>
+                <td>Earth</td>
+            </tr>
+            
+             <tr>
+                <td>Zoe</td>
+                <td>Heriot</td>
+                <td>Space Station W3</td>
+            </tr>
+            
+             <tr>
+                <td>Jo</td>
+                <td>Grant</td>
+                <td>Earth</td>
+            </tr>
+            
+             <tr>
+                <td>Leela</td>
+                <td></td>
+                <td>Unspecified</td>
+            </tr>
+            
+             <tr>
+                <td>Romana</td>
+                <td></td>
+                <td>Gallifrey</td>
+            </tr>
+            
+            <tr>
+                <td>Romana</td>
+                <td></td>
+                <td>Gallifrey</td>
+            </tr>
+            
+            <tr>
+                <td>Clara</td>
+                <td>Oswald</td>
+                <td>Earth</td>
+            </tr>
+            
+            <tr>
+                <td>Adric</td>
+                <td></td>
+                <td>Alzarius</td>
+            </tr>
+            
+            <tr>
+                <td>Susan</td>
+                <td>Foreman</td>
+                <td>Gallifrey</td>
+            </tr>
+            
+            
+        </table>
+
+    </body>
+
+</html>
